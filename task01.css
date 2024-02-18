@@ -1,0 +1,65 @@
+.title {
+  color: blue;
+}
+.subtitle {
+  font-size: 14px;
+}
+.illustration {
+  font-size: 12px;
+  background-color: black;
+  color: rgb(205, 205, 16);
+}
+.img {
+  height: 200px;
+  width: 470px;
+  border: 2px;
+  border-style: solid;
+  border-color: red;
+}
+.centered-div1 {
+  background-color: red;
+  width: 960px; /* 正确的属性 */
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+.container {
+  display: grid;
+  grid-template-columns: 390px auto;
+}
+.left-column {
+  background-color: red;
+}
+.right-column {
+  background-color: blue;
+}
+.rounded-rectangle {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  display: flex; /* 使用 flex 布局 */
+  align-items: center; /* 水平居中 */
+  justify-content: center; /* 垂直居中 */
+  background-color: red;
+  border-radius: 15px;
+}
+.red-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: red;
+  margin-bottom: 10px;
+}
+
+.blue-container {
+  background-color: blue;
+  width: 50px; /* 设置每个蓝色容器的固定宽度 */
+  height: 50px; /* 设置每个蓝色容器的高度 */
+  margin-right: 10px; /* 设置每个蓝色容器之间的间距 */
+}
+
+/* 添加媒体查询，根据浏览器宽度调整蓝色容器的数量 */
+@media (max-width: 700px) {
+  .blue-container {
+    flex-basis: calc(50% - 10px); /* 每行最多显示两个蓝色容器 */
+  }
+}
